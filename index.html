@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#ffd9c0">
+    <title>Invitación de cumpleaños de Lilith</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css.css">
+</head>
+
+<body class="bloqueado">
+    <canvas id="confeti" aria-hidden="true"></canvas>
+
+    <!-- PANTALLA DE ENTRADA -->
+    <div id="intro" role="dialog" aria-modal="true" aria-labelledby="intro-nombre">
+        <p class="intro-pre">Estás invitado al cumpleaños de</p>
+        <p id="intro-nombre"></p>
+        <button id="entrar" type="button">Abrir invitación</button>
+    </div>
+
+    <!-- BANNER: imagen a todo el ancho, pegada arriba -->
+    <header>
+        <button id="botonplim" type="button" aria-label="Toca el banner para lanzar confeti">
+            <img src="imagenes/aaaaa.png" alt="Banner de la invitación" fetchpriority="high">
+        </button>
+    </header>
+
+    <main>
+        <!-- PRESENTACIÓN -->
+        <section id="seccion1">
+            <div class="centro">
+                <h1 id="titulo"></h1>
+                <p id="d-nombre" class="nombre"></p>
+                <p id="d-edad" class="edad" hidden></p>
+                <p id="d-mensaje" class="mensaje" hidden></p>
+            </div>
+        </section>
+
+        <!-- FECHA + CUENTA REGRESIVA + PAPÁS -->
+        <section id="seccion2">
+            <div class="centro">
+                <p class="pre">Te esperamos el</p>
+                <p id="d-fecha" class="fecha"></p>
+
+                <div id="cuenta" class="cuenta" hidden>
+                    <p class="pre">Para el gran día faltan</p>
+                    <div class="cuenta-cajas">
+                        <div><span id="c-dias">0</span><small>Días</small></div>
+                        <div><span id="c-horas">0</span><small>Horas</small></div>
+                        <div><span id="c-min">0</span><small>Min.</small></div>
+                        <div><span id="c-seg">0</span><small>Seg.</small></div>
+                    </div>
+                </div>
+
+                <div id="padres" class="padres" hidden>
+                    <h2>Mis papás</h2>
+                    <div id="d-padres"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ¿DÓNDE? -->
+        <section id="seccion3">
+            <div class="centro">
+                <h2>¿Dónde?</h2>
+
+                <article class="tarjeta">
+                    <p class="etiqueta">Lugar</p>
+                    <p id="d-lugar" class="destacado"></p>
+
+                    <p class="etiqueta">Hora</p>
+                    <p id="d-hora" class="destacado"></p>
+
+                    <p class="etiqueta">Dirección</p>
+                    <p id="d-direccion"></p>
+
+                    <a id="d-mapa-link" class="boton" href="#" target="_blank" rel="noopener" hidden>Ver ubicación</a>
+
+                    <div class="mapa">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1184.2936018508146!2d-99.18568434871068!3d19.54599107642455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1f7e0db58538f%3A0xe5687e993b9539ba!2sMont!5e0!3m2!1ses!2smx!4v1795228373661!5m2!1ses!2smx"
+                            title="Ubicación de Google Maps"
+                            style="border:0;"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="strict-origin-when-cross-origin">
+                        </iframe>
+                    </div>
+                </article>
+
+                <article id="vestimenta" class="tarjeta" hidden>
+                    <h3>Código de vestimenta</h3>
+                    <p id="d-vestimenta" class="destacado"></p>
+                </article>
+
+                <article id="regalos" class="tarjeta" hidden>
+                    <h3>Mesa de regalos</h3>
+                    <p id="d-regalos"></p>
+                </article>
+            </div>
+        </section>
+
+        <!-- MIS MOMENTOS -->
+        <section id="seccion4">
+            <div class="centro ancho">
+                <h2>Mis momentos</h2>
+                <div class="fotos">
+                    <!-- Para tu imagen: borra el <span> y pon <img src="imagenes/archivo.png" alt="..."> -->
+                    <div class="foto"><span>img 1</span></div>
+                    <div class="foto"><span>img 2</span></div>
+                    <div class="foto"><span>img 3</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONFIRMA TU ASISTENCIA -->
+        <section id="seccion5">
+            <div class="centro ancho">
+                <h2>Confirma tu asistencia</h2>
+                <p id="d-lugares" class="lugares" hidden></p>
+                <p class="pre">Completa y envía el siguiente formulario.</p>
+
+                <div class="final">
+                    <div class="foto foto-final"><span>imagen</span></div>
+
+                    <iframe
+                        src="https://docs.google.com/forms/d/e/1FAIpQLSfiFVK9_31wyZcwmqAR2OSIs62Tyw8_aGc2qinV3uI_YEZcEg/viewform?embedded=true"
+                        title="Formulario de confirmación"
+                        frameborder="0"
+                        marginheight="0"
+                        marginwidth="0">
+                        Cargando...
+                    </iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- DESPEDIDA -->
+        <section id="seccion6">
+            <div class="centro">
+                <p id="d-final" class="despedida"></p>
+                <p id="d-nombre-final" class="nombre-final"></p>
+            </div>
+        </section>
+    </main>
+
+    <footer></footer>
+
+    <button id="musica" type="button" aria-label="Reproducir música" hidden>♪</button>
+
+    <script src="codigo.js"></script>
+</body>
+</html>
