@@ -1,14 +1,14 @@
 :root {
-    --durazno: #ffd9c0;
-    --crema: #fff8f1;
-    --rosa: #ff6f91;
-    --rosa-osc: #c93a63;
-    --menta: #4fd1b0;
-    --amarillo: #ffc83d;
-    --tinta: #1d2a44;
-    --azul: #1d3f8f;
+    --durazno: #eadcff;
+    --crema: #fff6fa;
+    --rosa: #ffb8d4;
+    --rosa-osc: #b8467f;
+    --menta: #c3f0e0;
+    --amarillo: #fff1b0;
+    --tinta: #3d2f5e;
+    --azul: #d6c4f7;
     --radio: 22px;
-    --sombra: 0 8px 24px rgba(29, 42, 68, 0.12);
+    --sombra: 0 8px 24px rgba(160, 110, 200, 0.18);
     --titulos: "Fraunces", Georgia, "Times New Roman", serif;
 }
 
@@ -64,7 +64,7 @@ p {
     gap: 14px;
     padding: 32px 24px;
     text-align: center;
-    background: var(--durazno);
+    background: linear-gradient(160deg, #ffd6e8 0%, #eadcff 100%);
     transition: opacity 0.6s ease, visibility 0.6s ease;
 }
 
@@ -95,8 +95,8 @@ p {
     padding: 14px 32px;
     border: 0;
     border-radius: 999px;
-    background: var(--rosa-osc);
-    color: #fff;
+    background: var(--rosa);
+    color: var(--tinta);
     font: 700 1.05rem "Nunito", system-ui, sans-serif;
     text-decoration: none;
     cursor: pointer;
@@ -170,7 +170,7 @@ section {
 #seccion3 { background: var(--crema); }
 #seccion4 { background: var(--durazno); }
 #seccion5 { background: var(--crema); }
-#seccion6 { background: var(--azul); color: var(--crema); padding-top: 64px; padding-bottom: 72px; }
+#seccion6 { background: var(--azul); color: var(--tinta); padding-top: 64px; padding-bottom: 72px; }
 
 .centro {
     width: 100%;
@@ -208,7 +208,7 @@ h3 {
 .pre {
     font-size: 1.05rem;
     font-weight: 600;
-    color: #52618a;
+    color: #7a6a9c;
 }
 
 .nombre {
@@ -277,7 +277,7 @@ h3 {
     margin-top: 4px;
     font-size: 0.85rem;
     font-weight: 600;
-    color: #52618a;
+    color: #7a6a9c;
 }
 
 .padres {
@@ -418,7 +418,7 @@ h3 {
     margin-top: 16px;
     font-weight: 700;
     font-size: 1.15rem;
-    color: var(--amarillo);
+    color: var(--rosa-osc);
 }
 
 footer {
@@ -438,8 +438,8 @@ footer {
     height: 52px;
     border: 0;
     border-radius: 50%;
-    background: var(--rosa-osc);
-    color: #fff;
+    background: var(--rosa);
+    color: var(--tinta);
     font-size: 1.5rem;
     line-height: 1;
     cursor: pointer;
@@ -448,7 +448,7 @@ footer {
 }
 
 #musica.sonando {
-    background: var(--tinta);
+    background: var(--azul);
 }
 
 /* ===== Pantallas grandes ===== */

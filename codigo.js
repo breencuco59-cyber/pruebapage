@@ -6,12 +6,14 @@ const fiesta = {
     edad: "",                         // Ej: "¡Cumplo 7 años!"
     mensaje: "La felicidad se multiplica cuando la compartimos. Quiero que seas parte de este día tan especial.",
 
-    fecha: "Escribe la fecha",        // Texto que se ve, Ej: "Sábado 14 de marzo de 2027"
-    fechaCuenta: "",                  // Para la cuenta regresiva: "2027-03-14T16:00:00"
-    hora: "Escribe la hora",
-    lugar: "Escribe el lugar",
-    direccion: "Escribe la dirección",
-    ubicacionUrl: "",                 // Enlace de Google Maps para el botón "Ver ubicación"
+    fecha: "Sábado 27 de febrero de 2027",        // Texto que se ve, Ej: "Sábado 14 de marzo de 2027"
+    fechaCuenta: "2027-02-27T14:00:00",                  // Para la cuenta regresiva: "2027-03-14T16:00:00"
+    hora: "2:00 p.m.",
+    lugar: "Salón de eventos",
+    direccion: "Toca el botón para ver la ubicación en Google Maps",
+    ubicacionUrl: "https://share.google/U6Lsgq3PoPR22QxkC",
+    iglesiaUrl: "https://share.google/L8tuaSyqaujXzcEBt", // Ubicación de la iglesia
+                    // Enlace de Google Maps para el botón "Ver ubicación"
 
     padres: [],                       // Ej: ["Nombre Apellido", "Nombre Apellido"]
     vestimenta: "",                   // Ej: "Casual"
@@ -23,7 +25,7 @@ const fiesta = {
 };
 // ===============================================
 
-const colores = ["#ffc83d", "#ff6f91", "#4fd1b0", "#fffaf2", "#6aa8ff"];
+const colores = ["#ffb8d4", "#d6c4f7", "#c3f0e0", "#fff1b0", "#bfd8ff"];
 const $ = (id) => document.getElementById(id);
 
 // Pone texto en un elemento; si no hay texto, lo oculta.
@@ -62,6 +64,11 @@ if (fiesta.lugaresReservados) {
 if (fiesta.ubicacionUrl) {
     $("d-mapa-link").href = fiesta.ubicacionUrl;
     $("d-mapa-link").hidden = false;
+}
+
+if (fiesta.iglesiaUrl) {
+    $("d-iglesia-link").href = fiesta.iglesiaUrl;
+    $("iglesia").hidden = false;
 }
 
 if (fiesta.padres.length) {
